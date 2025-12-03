@@ -1,0 +1,2 @@
+# Shell_scripting_Projects
+Ny using Github Api  we can see the collaboarters of the organization and who is accessing our repository  like this we can fetch whatever the data we want  from shell scripting without github user interface and without login also.
