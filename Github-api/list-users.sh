@@ -1,5 +1,16 @@
 #!/bin/bash
 
+###########
+#
+#
+#Author: Arveti Ganesh
+#Version:v1
+#About: This Shell script gives the users and collaborators details in list format
+#Inputs: username and token
+###########
+
+
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
