@@ -12,3 +12,12 @@ backup_dir="/path/to/backup"
 source_dir="/path/to/source"
 timestamp=$(date +"%Y%m%d%H%M%S")
 tar -czf "$backup_dir/backup_$timestamp.tar.gz" "$source_dir"
+
+# Check if the tar command was successful
+if [ $? -eq 0 ]
+then
+    echo "Backup successful: $backup_dir/backup_$timestamp.tar.gz"
+else
+    echo "Backup Failed!"
+    exit 1
+fi
