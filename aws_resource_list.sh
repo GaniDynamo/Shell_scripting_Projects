@@ -35,4 +35,18 @@ if [ $# -ne 2]; then
     echo "Example: ./aws_resource.list.sh us-east-1 ec2"
     exit 1
 fi
+# Assign the arguments to variables and convert the service to lowercase
+aws_region={1,,}
+aws_resource={2,,}
 
+# Check if the AWS CLI is installed
+if ! command -v aws &> dev/null; then
+    echo "AWS CLI is not installed. Please install the AWS CLI and try again."
+    exit 1
+fi
+    
+# Check if the AWS CLI is configured
+if [ ! -d ~/.aws ]; then
+echo "AWS CLI is not configured. Please configure the AWS CLI and try again."
+exit 1
+fi
